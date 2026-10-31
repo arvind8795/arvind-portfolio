@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>Arvind Kumar | Frontend Web Developer & BCA Student</title>
+  <meta name="title" content="Arvind Kumar | Frontend Web Developer & BCA Student">
+  <meta name="description" content="Portfolio of Arvind Kumar - Passionate Frontend Web Developer & BCA Student at Madhusudan Das Degree College, Gorakhpur. Skilled in HTML, CSS, JavaScript, C++, Git, and GitHub.">
+  <meta name="keywords" content="Arvind Kumar, Arvind, Frontend Web Developer, Portfolio, BCA Student, Gorakhpur, Madhusudan Das Degree College, JavaScript Developer, HTML, CSS, Web Designer">
+  <meta name="author" content="Arvind Kumar">
+  <meta name="theme-color" content="#0a0705">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Arvind Kumar | Frontend Web Developer">
+  <meta property="og:description" content="Explore 18+ web projects, skills, education, and credentials of Arvind Kumar.">
+  <meta property="og:image" content="assets/arvind_portrait.jpg">
+
+  <!-- Google Fonts: Outfit, Plus Jakarta Sans, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6.5.2 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Scroll Progress Bar -->
+  <div class="scroll-progress-track">
+    <div class="scroll-progress-fill" id="scrollProgress"></div>
+  </div>
+
+  <!-- Background Canvas for Interactive Constellation & Ambient Orbs -->
+  <canvas id="ambientCanvas"></canvas>
+  <div class="ambient-glow glow-top-left"></div>
+  <div class="ambient-glow glow-center-right"></div>
+  <div class="ambient-glow glow-bottom-left"></div>
+
+  <!-- =========================================================================
+       2. NAVIGATION BAR (Sticky Rounded Glassmorphism Navbar)
+       ========================================================================= -->
+  <header class="header-wrap" id="header">
+    <nav class="nav-container glass-nav" id="mainNavbar">
+      
+      <!-- Brand Logo -->
+      <a href="#home" class="nav-brand" aria-label="Arvind Kumar Portfolio">
+        <div class="brand-monogram">
+          <span class="mono-code">&lt;</span>AK<span class="mono-code">/&gt;</span>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Arvind</span><span class="brand-accent">.dev</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="#skills" class="nav-link"><i class="fa-solid fa-code"></i> Skills</a></li>
+        <li><a href="#experience" class="nav-link"><i class="fa-solid fa-briefcase"></i> Experience</a></li>
+        <li><a href="#projects" class="nav-link"><i class="fa-solid fa-laptop-code"></i> Projects</a></li>
+        <li><a href="#about" class="nav-link"><i class="fa-solid fa-user"></i> About</a></li>
+        <li><a href="#education" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> Education</a></li>
+        <li><a href="#connect" class="nav-link"><i class="fa-solid fa-paper-plane"></i> Connect</a></li>
+      </ul>
+
+      <!-- Navbar Action: Download Resume Button -->
+      <div class="nav-cta-group">
+        <a href="assets/Arvind_Kumar_Resume.pdf" download="Arvind_Kumar_Resume.pdf" class="btn btn-nav-resume" id="navResumeBtn">
+          <i class="fa-solid fa-file-arrow-down"></i>
+          <span>Download Resume</span>
+        </a>
+
+        <!-- Mobile Hamburger Toggle Button -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span class="bar bar-1"></span>
+          <span class="bar bar-2"></span>
+          <span class="bar bar-3"></span>
+        </button>
+      </div>
+
+    </nav>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <div class="mobile-drawer-header">
+        <div class="brand-text">
+          <span class="brand-name">Arvind</span><span class="brand-accent">.dev</span>
+        </div>
+        <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <ul class="mobile-links">
+        <li><a href="#home" class="mobile-link active"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="#skills" class="mobile-link"><i class="fa-solid fa-code"></i> Skills</a></li>
+        <li><a href="#experience" class="mobile-link"><i class="fa-solid fa-briefcase"></i> Experience</a></li>
+        <li><a href="#projects" class="mobile-link"><i class="fa-solid fa-laptop-code"></i> Projects</a></li>
+        <li><a href="#about" class="mobile-link"><i class="fa-solid fa-user"></i> About</a></li>
+        <li><a href="#education" class="mobile-link"><i class="fa-solid fa-graduation-cap"></i> Education</a></li>
+        <li><a href="#connect" class="mobile-link"><i class="fa-solid fa-paper-plane"></i> Connect</a></li>
+      </ul>
+      <div class="mobile-drawer-footer">
+        <a href="assets/Arvind_Kumar_Resume.pdf" download="Arvind_Kumar_Resume.pdf" class="btn btn-primary btn-block">
+          <i class="fa-solid fa-file-arrow-down"></i> Download Resume
+        </a>
+      </div>
+    </div>
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         3. HERO SECTION (Greeting, Identity, Dual-Showcase Real Photo + 3D Avatar)
+         ========================================================================= -->
+    <section class="hero-section" id="home">
+      <div class="section-container hero-grid">
+        
+        <!-- Left Hero Content -->
+        <div class="hero-content reveal-fade-up">
+          
+          <div class="badge-pill hero-status-pill">
+            <span class="pulse-dot"></span>
+            <span class="pill-text">Hey, I'm Arvind.</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="title-line">Frontend Web</span>
+            <span class="title-gradient">Developer.</span>
+          </h1>
+
+          <p class="hero-intro">
+            I'm passionate about building modern, responsive and interactive websites with creative designs and clean code.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="hero-actions">
+            <a href="#connect" class="btn btn-primary glow-btn" id="hireMeBtn">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Hire Me</span>
+            </a>
+            <a href="#projects" class="btn btn-secondary" id="viewProjectsBtn">
+              <i class="fa-solid fa-layer-group"></i>
+              <span>View My Projects</span>
+            </a>
+          </div>
+
+          <!-- Quick Connect & Clickable Email Icon -->
+          <div class="hero-connect-bar">
+            <span class="connect-label">Quick Connect:</span>
+            <div class="social-icon-tray">
+              <a href="mailto:arvindgupta32823@gmail.com" class="icon-link-btn email-highlight" title="Send Email to Arvind" aria-label="Email Arvind">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+              <a href="tel:9582035342" class="icon-link-btn" title="Call Arvind (+91 9582035342)" aria-label="Call Arvind">
+                <i class="fa-solid fa-phone"></i>
+              </a>
+              <a href="https://github.com/your-Arvind" target="_blank" rel="noopener noreferrer" class="icon-link-btn" title="Arvind's GitHub" aria-label="GitHub Profile">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/your-Arvind" target="_blank" rel="noopener noreferrer" class="icon-link-btn" title="Arvind's LinkedIn" aria-label="LinkedIn Profile">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Stats Row -->
+          <div class="hero-stats-row">
+            <div class="stat-card">
+              <span class="stat-number">18+</span>
+              <span class="stat-label">Web Projects</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-card">
+              <span class="stat-number">BCA</span>
+              <span class="stat-label">Computer Science</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-card">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Responsive UI</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Hero Visual Showcase: Real Portrait & Complementary 3D Developer -->
+        <div class="hero-visual-wrapper reveal-fade-left">
+          
+          <!-- View Switcher Tabs -->
+          <div class="persona-tab-bar" role="tablist" aria-label="Developer Showcase View">
+            <button class="persona-tab-btn active" id="tabReal" role="tab" aria-selected="true" data-view="real">
+              <i class="fa-solid fa-camera"></i> Arvind (Real Photo)
+            </button>
+            <button class="persona-tab-btn" id="tab3D" role="tab" aria-selected="false" data-view="avatar">
+              <i class="fa-solid fa-vr-cardboard"></i> 3D Developer Persona
+            </button>
+            <button class="persona-tab-btn" id="tabSplit" role="tab" aria-selected="false" data-view="split">
+              <i class="fa-solid fa-table-columns"></i> Side-by-Side
+            </button>
+          </div>
+
+          <!-- Showcase Stage -->
+          <div class="visual-stage-container" id="visualStage">
+            
+            <!-- Real Photograph Card (Primary Personal Identity) -->
+            <div class="visual-card real-photo-card active" id="realPhotoCard">
+              <div class="glowing-border-wrapper">
+                <div class="orange-glow-halo"></div>
+                <div class="photo-frame">
+                  <img src="assets/arvind_portrait.jpg" alt="Arvind Kumar - Frontend Web Developer" class="arvind-real-dp" id="heroRealImg">
+                  <div class="photo-overlay-glass">
+                    <div class="photo-identity-badge">
+                      <div class="identity-name">Arvind Kumar</div>
+                      <div class="identity-role">Frontend Web Developer • BCA</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Floating Verified Status Pill -->
+              <div class="floating-badge badge-status">
+                <span class="status-indicator"></span>
+                <span>Open for Opportunities</span>
+              </div>
+
+              <!-- Floating Tech Badge 1: JavaScript -->
+              <div class="floating-badge badge-tech-1 float-slow">
+                <i class="fa-brands fa-js icon-js"></i>
+                <span>JavaScript ES6+</span>
+              </div>
+
+              <!-- Floating Tech Badge 2: React / HTML5 -->
+              <div class="floating-badge badge-tech-2 float-reverse">
+                <i class="fa-brands fa-html5 icon-html"></i>
+                <span>HTML5 & CSS3</span>
+              </div>
+            </div>
+
+            <!-- Complementary 3D Developer Character Card -->
+            <div class="visual-card avatar-3d-card" id="avatar3DCard">
+              <div class="glowing-border-wrapper avatar-glow">
+                <div class="orange-glow-halo halo-avatar"></div>
+                <div class="photo-frame avatar-frame">
+                  <img src="assets/developer_3d_avatar.png" alt="3D Cartoon Developer Character in Orange Jacket" class="arvind-3d-avatar" id="hero3DImg">
+                  <div class="photo-overlay-glass">
+                    <div class="photo-identity-badge">
+                      <div class="identity-name">3D Dev Persona</div>
+                      <div class="identity-role">Coding in Orange Hoodie</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Floating Tech Orbs for 3D Character -->
+              <div class="floating-badge badge-tech-3 float-slow">
+                <i class="fa-brands fa-git-alt icon-git"></i>
+                <span>Git & GitHub</span>
+              </div>
+              <div class="floating-badge badge-tech-4 float-reverse">
+                <i class="fa-solid fa-code icon-cplus"></i>
+                <span>C++ Logic</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Helper caption emphasizing authenticity -->
+          <p class="visual-caption">
+            <i class="fa-solid fa-shield-check"></i> Arvind Kumar • Authentic Profile Verified
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. TECHNICAL SKILLS SECTION
+         ========================================================================= -->
+    <section class="section-padding skills-section" id="skills">
+      <div class="section-container">
+        
+        <div class="section-header text-center reveal-fade-up">
+          <div class="badge-pill">
+            <i class="fa-solid fa-microchip"></i> Technical Toolkit
+          </div>
+          <h2 class="section-heading">Core Skills & <span class="text-orange-gradient">Technologies</span></h2>
+          <p class="section-subheading">
+            Proficient frontend and programming capabilities applied across interactive web projects and computational problem-solving.
+          </p>
+        </div>
+
+        <!-- 6 Main Skills Cards (HTML, CSS, JavaScript, C++, Git, GitHub) -->
+        <div class="skills-grid">
+          
+          <!-- HTML5 -->
+          <div class="glass-card skill-card reveal-fade-up" data-delay="100">
+            <div class="skill-card-top">
+              <div class="skill-icon-box icon-html-bg">
+                <i class="fa-brands fa-html5"></i>
+              </div>
+              <span class="skill-level-badge">Core Foundation</span>
+            </div>
+            <h3 class="skill-name">HTML5</h3>
+            <p class="skill-desc">
+              Semantic structure, accessible markup, responsive layouts, forms, modern SEO attributes, and media embedding.
+            </p>
+            <div class="skill-tags">
+              <span class="mini-tag">Semantic Web</span>
+              <span class="mini-tag">Accessibility</span>
+              <span class="mini-tag">SEO Best Practices</span>
+            </div>
+          </div>
+
+          <!-- CSS3 -->
+          <div class="glass-card skill-card reveal-fade-up" data-delay="150">
+            <div class="skill-card-top">
+              <div class="skill-icon-box icon-css-bg">
+                <i class="fa-brands fa-css3-alt"></i>
+              </div>
+              <span class="skill-level-badge">Core Styling</span>
+            </div>
+            <h3 class="skill-name">CSS3</h3>
+            <p class="skill-desc">
+              Modern Flexbox, CSS Grid systems, glassmorphism, keyframe animations, responsive media queries, and dark/orange themes.
+            </p>
+            <div class="skill-tags">
+              <span class="mini-tag">Flexbox & Grid</span>
+              <span class="mini-tag">Keyframe Animations</span>
+              <span class="mini-tag">Glassmorphism</span>
+            </div>
+          </div>
+
+          <!-- JavaScript -->
+          <div class="glass-card skill-card reveal-fade-up" data-delay="200">
+            <div class="skill-card-top">
+              <div class="skill-icon-box icon-js-bg">
+                <i class="fa-brands fa-js"></i>
+              </div>
+              <span class="skill-level-badge">Interactive Logic</span>
+            </div>
+            <h3 class="skill-name">JavaScript (ES6+)</h3>
+            <p class="skill-desc">
+              DOM manipulation, event handling, asynchronous fetching, localStorage, game mechanics, and modular algorithms.
+            </p>
+            <div class="skill-tags">
+              <span class="mini-tag">DOM Engineering</span>
+              <span class="mini-tag">ES6+ Syntax</span>
+              <span class="mini-tag">Async / Fetch</span>
+            </div>
+          </div>
+
+          <!-- C++ -->
+          <div class="glass-card skill-card reveal-fade-up" data-delay="250">
+            <div class="skill-card-top">
+              <div class="skill-icon-box icon-cpp-bg">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <span class="skill-level-badge">Problem Solving</span>
+            </div>
+            <h3 class="skill-name">C++</h3>
+            <p class="skill-desc">
+              Object-Oriented Programming (OOP), pointers, memory concepts, algorithm design, data structures, and university coursework.
+            </p>
+            <div class="skill-tags">
+              <span class="mini-tag">Object-Oriented</span>
+              <span class="mini-tag">Data Structures</span>
+              <span class="mini-tag">Logic Building</span>
+            </div>
+          </div>
+
+          <!-- Git -->
+          <div class="glass-card skill-card reveal-fade-up" data-delay="300">
+            <div class="skill-card-top">
+              <div class="skill-icon-box icon-git-bg">
+                <i class="fa-brands fa-git-alt"></i>
+              </div>
+              <span class="skill-level-badge">Version Control</span>
+            </div>
+            <h3 class="skill-name">Git</h3>
+            <p class="skill-desc">
+              Distributed version tracking, committing, branching workflows, merging, history inspection, and terminal commands.
+            </p>
+            <div class="skill-tags">
+              <span class="mini-tag">Branching</span>
+              <span class="mini-tag">Merge Workflows</span>
+              <span class="mini-tag">CLI Proficiency</span>
+            </div>
+          </div>
+
+          <!-- GitHub -->
+          <div class="glass-card skill-card reveal-fade-up" data-delay="350">
+            <div class="skill-card-top">
+              <div class="skill-icon-box icon-github-bg">
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <span class="skill-level-badge">Collaboration</span>
+            </div>
+            <h3 class="skill-name">GitHub</h3>
+            <p class="skill-desc">
+              Repository management, pull requests, issue tracking, GitHub Pages live deployment, and open-source exploration.
+            </p>
+            <div class="skill-tags">
+              <span class="mini-tag">Repositories</span>
+              <span class="mini-tag">GitHub Pages</span>
+              <span class="mini-tag">Collaborative Dev</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Additional Development Competencies -->
+        <div class="sub-skills-bar glass-card reveal-fade-up">
+          <div class="sub-skills-title">
+            <i class="fa-solid fa-wand-magic-sparkles text-orange"></i> Additional Frontend Competencies:
+          </div>
+          <div class="sub-skills-pills">
+            <span class="competency-pill"><i class="fa-solid fa-mobile-screen-button"></i> Mobile-First Design</span>
+            <span class="competency-pill"><i class="fa-solid fa-bolt"></i> Performance Optimization</span>
+            <span class="competency-pill"><i class="fa-solid fa-database"></i> Web Storage (LocalStorage)</span>
+            <span class="competency-pill"><i class="fa-solid fa-cubes"></i> Component-Driven Thinking</span>
+            <span class="competency-pill"><i class="fa-solid fa-check-double"></i> Cross-Browser Testing</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         EXPERIENCE SECTION
+         ========================================================================= -->
+    <section class="section-padding experience-section" id="experience">
+      <div class="section-container">
+        
+        <div class="section-header text-center reveal-fade-up">
+          <div class="badge-pill">
+            <i class="fa-solid fa-timeline"></i> Practical Journey
+          </div>
+          <h2 class="section-heading">Development <span class="text-orange-gradient">Experience</span></h2>
+          <p class="section-subheading">
+            Key milestones, hands-on practice, and academic projects driving my frontend engineering growth.
+          </p>
+        </div>
+
+        <div class="timeline-container">
+          
+          <!-- Experience Card 1 -->
+          <div class="timeline-row reveal-fade-up">
+            <div class="timeline-marker">
+              <div class="marker-dot"></div>
+              <div class="marker-line"></div>
+            </div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-card-header">
+                <div class="timeline-title-group">
+                  <h3 class="role-title">Frontend Web Developer & Project Architect</h3>
+                  <span class="company-name">Self-Directed & Academic Projects</span>
+                </div>
+                <span class="timeline-date-badge">2024 — Present</span>
+              </div>
+              <p class="timeline-desc">
+                Architecting and building responsive, interactive client-side web applications using modern HTML5, CSS3, and JavaScript (ES6+). Focused on UX polish, glassmorphism aesthetics, mobile responsiveness, and clean code principles.
+              </p>
+              <ul class="timeline-highlights">
+                <li><i class="fa-solid fa-chevron-right text-orange"></i> Created 18+ comprehensive web applications ranging from full clones (Amazon, Netflix) to interactive games and utility apps.</li>
+                <li><i class="fa-solid fa-chevron-right text-orange"></i> Practiced daily DOM manipulation, state persistence with LocalStorage, and async REST API integrations.</li>
+                <li><i class="fa-solid fa-chevron-right text-orange"></i> Maintained version-controlled repositories using Git and deployed live projects to GitHub Pages.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Experience Card 2 -->
+          <div class="timeline-row reveal-fade-up">
+            <div class="timeline-marker">
+              <div class="marker-dot"></div>
+              <div class="marker-line"></div>
+            </div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-card-header">
+                <div class="timeline-title-group">
+                  <h3 class="role-title">BCA Student & Computer Science Scholar</h3>
+                  <span class="company-name">Madhusudan Das Degree College, Gorakhpur</span>
+                </div>
+                <span class="timeline-date-badge">2024 — Present</span>
+              </div>
+              <p class="timeline-desc">
+                Pursuing Bachelor of Computer Applications under Deen Dayal Upadhyaya Gorakhpur University (DDUGU). Gaining deep foundational knowledge in computer architecture, algorithmic reasoning, and programming paradigms.
+              </p>
+              <ul class="timeline-highlights">
+                <li><i class="fa-solid fa-chevron-right text-orange"></i> Mastered procedural and object-oriented programming principles using C and C++.</li>
+                <li><i class="fa-solid fa-chevron-right text-orange"></i> Studied relational database concepts, data structures, and computer networks.</li>
+                <li><i class="fa-solid fa-chevron-right text-orange"></i> Collaborated with peers on technical lab assignments, presentation decks, and coding competitions.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. PROJECTS SECTION (18 Projects with Filters, Modals, Details)
+         ========================================================================= -->
+    <section class="section-padding projects-section" id="projects">
+      <div class="section-container">
+        
+        <div class="section-header text-center reveal-fade-up">
+          <div class="badge-pill">
+            <i class="fa-solid fa-folder-open"></i> Portfolio Showcase
+          </div>
+          <h2 class="section-heading">Featured <span class="text-orange-gradient">Projects (18)</span></h2>
+          <p class="section-subheading">
+            A comprehensive catalog of 18 frontend web applications, interactive games, and developer utilities built with clean code and modern aesthetics.
+          </p>
+
+          <!-- Category Filter Tabs -->
+          <div class="project-filter-bar" role="tablist" aria-label="Project Categories">
+            <button class="filter-btn active" data-filter="all"><i class="fa-solid fa-border-all"></i> All Projects (18)</button>
+            <button class="filter-btn" data-filter="clones"><i class="fa-solid fa-copy"></i> Clones & E-Commerce (3)</button>
+            <button class="filter-btn" data-filter="games"><i class="fa-solid fa-gamepad"></i> Interactive Games (3)</button>
+            <button class="filter-btn" data-filter="utilities"><i class="fa-solid fa-screwdriver-wrench"></i> Utilities & Tools (8)</button>
+            <button class="filter-btn" data-filter="ui"><i class="fa-solid fa-palette"></i> UIs & Portfolios (4)</button>
+          </div>
+        </div>
+
+        <!-- 18 Projects Grid -->
+        <div class="projects-grid" id="projectsGrid">
+
+          <!-- 1. Amazon Clone -->
+          <div class="glass-card project-card" data-category="clones">
+            <div class="project-thumb-box">
+              <img src="assets/projects/amazon-clone.svg" alt="Amazon Clone Thumbnail" class="project-img" loading="lazy">
+              <span class="project-status-badge status-completed"><i class="fa-solid fa-circle-check"></i> Completed</span>
+              <span class="project-num-badge">#01</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-category"><i class="fa-solid fa-cart-shopping"></i> E-Commerce Clone</span>
+              </div>
+              <h3 class="project-title">Amazon Clone</h3>
+              <p class="project-desc">
+                High-fidelity Amazon storefront recreation featuring dark theme navigation, mega deals carousel, product grids, search simulation, and shopping cart counter.
+              </p>
+              <div class="project-tags">
+                <span class="p-tag">HTML5</span>
+                <span class="p-tag">CSS3</span>
+                <span class="p-tag">JavaScript</span>
+                <span class="p-tag">Responsive</span>
+              </div>
+              <div class="project-card-actions">
+                <button class="btn btn-project-demo" onclick="openProjectModal('amazon-clone')">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </button>
+                <a href="https://github.com/your-Arvind/amazon-clone" target="_blank" rel="noopener noreferrer" class="btn btn-project-gh" title="GitHub Repository">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Tic Tac Toe Game -->
+          <div class="glass-card project-card" data-category="games">
+            <div class="project-thumb-box">
+              <img src="assets/projects/tic-tac-toe.svg" alt="Tic Tac Toe Game Thumbnail" class="project-img" loading="lazy">
+              <span class="project-status-badge status-completed"><i class="fa-solid fa-circle-check"></i> Completed</span>
+              <span class="project-num-badge">#02</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-category"><i class="fa-solid fa-gamepad"></i> Logic Game</span>
+              </div>
+              <h3 class="project-title">Tic Tac Toe Game</h3>
+              <p class="project-desc">
+                Interactive two-player strategy game with custom win-detection algorithms, turn indicator, score counter, glowing strike animations, and instant board restart.
+              </p>
+              <div class="project-tags">
+                <span class="p-tag">JavaScript</span>
+                <span class="p-tag">DOM Manipulation</span>
+                <span class="p-tag">Game Logic</span>
+              </div>
+              <div class="project-card-actions">
+                <button class="btn btn-project-demo" onclick="openProjectModal('tic-tac-toe')">
+                  <i class="fa-solid fa-play"></i> Play Demo
+                </button>
+                <a href="https://github.com/your-Arvind/tic-tac-toe" target="_blank" rel="noopener noreferrer" class="btn btn-project-gh" title="GitHub Repository">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Personal Portfolio Website -->
+          <div class="glass-card project-card" data-category="ui">
+            <div class="project-thumb-box">
+              <img src="assets/projects/portfolio-website.svg" alt="Personal Portfolio Website Thumbnail" class="project-img" loading="lazy">
+              <span class="project-status-badge status-completed"><i class="fa-solid fa-circle-check"></i> Completed</span>
+              <span class="project-num-badge">#03</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-category"><i class="fa-solid fa-palette"></i> Portfolio Design</span>
+              </div>
+              <h3 class="project-title">Personal Portfolio Website</h3>
+              <p class="project-desc">
+                World-class developer portfolio with dark obsidian and warm burnt orange theme, glassmorphism cards, glowing borders, smooth scroll, and interactive showcases.
+              </p>
+              <div class="project-tags">
+                <span class="p-tag">HTML5</span>
+                <span class="p-tag">CSS3</span>
+                <span class="p-tag">JavaScript</span>
+                <span class="p-tag">Canvas</span>
+              </div>
+              <div class="project-card-actions">
+                <button class="btn btn-project-demo" onclick="openProjectModal('portfolio-website')">
+                  <i class="fa-solid fa-eye"></i> Quick View
+                </button>
+                <a href="https://github.com/your-Arvind/personal-portfolio" target="_blank" rel="noopener noreferrer" class="btn btn-project-gh" title="GitHub Repository">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Weather Forecast App -->
+          <div class="glass-card project-card" data-category="utilities">
+            <div class="project-thumb-box">
+              <img src="assets/projects/weather-app.svg" alt="Weather Forecast App Thumbnail" class="project-img" loading="lazy">
+              <span class="project-status-badge status-completed"><i class="fa-solid fa-circle-check"></i> Completed</span>
+              <span class="project-num-badge">#04</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-category"><i class="fa-solid fa-cloud-sun"></i> Weather Utility</span>
+              </div>
+              <h3 class="project-title">Weather Forecast App</h3>
+              <p class="project-desc">
+                Live meteorological web app supporting worldwide city lookup, dynamic temperature displays, humidity, wind velocity, and multi-day forecast predictions.
+              </p>
+              <div class="project-tags">
+                <span class="p-tag">Fetch API</span>
+                <span class="p-tag">JSON</span>
+                <span class="p-tag">Async JavaScript</span>
+              </div>
+              <div class="project-card-actions">
+                <button class="btn btn-project-demo" onclick="openProjectModal('weather-app')">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </button>
+                <a href="https://github.com/your-Arvind/weather-forecast-app" target="_blank" rel="noopener noreferrer" class="btn btn-project-gh" title="GitHub Repository">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. To-Do List App -->
+          <div class="glass-card project-card" data-category="utilities">
+            <div class="project-thumb-box">
+              <img src="assets/projects/todo-app.svg" alt="To-Do List App Thumbnail" class="project-img" loading="lazy">
+              <span class="project-status-badge status-completed"><i class="fa-solid fa-circle-check"></i> Completed</span>
+              <span class="project-num-badge">#05</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-category"><i class="fa-solid fa-list-check"></i> Productivity Tool</span>
+              </div>
+              <h3 class="project-title">To-Do List App</h3>
+              <p class="project-desc">
+                Full-featured task manager with local storage persistence, task addition, editing, completion toggles, delete action, and active/completed filters.
+              </p>
+              <div class="project-tags">
+                <span class="p-tag">LocalStorage</span>
+                <span class="p-tag">CRUD Operations</span>
+                <span class="p-tag">CSS3</span>
+              </div>
+              <div class="project-card-actions">
+                <button class="btn btn-project-demo" onclick="openProjectModal('todo-app')">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </button>
+                <a href="https://github.com/your-Arvind/todo-list-app" target="_blank" rel="noopener noreferrer" class="btn btn-project-gh" title="GitHub Repository">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Calculator App -->
+          <div class="glass-card project-card" data-category="utilities">
+            <div class="project-thumb-box">
+              <img src="assets/projects/calculator-app.svg" alt="Calculator App Thumbnail" class="project-img" loading="lazy">
+              <span class="project-status-badge status-completed"><i class="fa-solid fa-circle-check"></i> Completed</span>
+              <span class="project-num-badge">#06</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-category"><i class="fa-solid fa-calculator"></i> Math Utility</span>
+              </div>
+              <h3 class="project-title">Calculator App</h3>
+              <p class="project-desc">
+                Neomorphic dark theme calculator featuring arithmetic chaining, keyboard input support, decimal operations, percentage computations, and backspace memory.
+              </p>
+              <div class="project-tags">
+                <span class="p-tag">Math Logic</span>
+                <span class="p-tag">Event Delegation</span>
+                <span class="p-tag">Neomorphism</span>
+              </div>
+              <div class="project-card-actions">
+                <button class="btn btn-project-demo" onclick="openProjectModal('calculator-app')">
+                  <i class="fa-solid fa-play"></i> Open Calculator
+                </button>
+                <a href="https://github.com/your-Arvind/calculator-app" target="_blank" rel="noopener noreferrer" class="btn btn-project-gh" title="GitHub Repository">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. Netflix Clone -->
+          <div class="glass-card project-card" data-category="clones">
+            <div class="project-thumb-box">
+              <img src="assets/projects/netflix-clone.svg" alt="Netflix Clone Thumbnail" class="project-img" loading="lazy">
+              <span class="project-status-badge status-completed"><i class="fa-solid fa-circle-check"></i> Completed</span>
+              <span class="project-num-badge">#07</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-category"><i class="fa-solid fa-film"></i> Streaming Clone</span>
+              </div>
+              <h3 class="project-title">Netflix Clone</h3>
+              <p class="project-desc">
+                Cinematic streaming platform interface featuring hero movie billboard, category carousels, responsive grid cards, video trailer modal, and smooth hover zoom effects.
+              </p>
+              <div class="project-tags">
+                <span class="p-tag">HTML5</span>
+                <span class="p-tag">CSS3</span>
+                <span class="p-tag">Flexbox / Grid</span>
+              </div>
+              <div class="project-card-actions">
+                <button class="btn btn-project-demo" onclick="openProjectModal('netflix-clone')">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </button>
+                <a href="https://github.com/your-Arvind/netflix-clone" target="_blank" rel="noopener noreferrer" class="btn btn-project-gh" title="GitHub Repository">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. Music Player -->
+          <div class="glass-card project-card" data-category="utilities">
+            <div class="project-thumb-box">
+              <img src="assets/projects/music-player.svg" alt="Music Player Thumbnail" class="project-img" loading="lazy">
+              <span class="project-status-badge status-completed"><i class="fa-solid fa-circle-check"></i> Completed</span>
+              <span class="project-num-badge">#08</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-category"><i class="fa-solid fa-music"></i> Audio Engine</span>
+              </div>
+              <h3 class="project-title">Music Player</h3>
+              <p class="project-desc">
+                Custom web audio player with play/pause/skip controls, interactive timeline scrubbing, volume slider, track metadata, and animated spinning vinyl record.
+              </p>
+              <div class="project-tags">
+                <span class="p-tag">HTML5 Audio</span>
+                <span class="p-tag">State Management</span>
+                <span class="p-tag">CSS Animation</span>
+              </div>
+              <div class="project-card-actions">
+                <button class="btn btn-project-demo" onclick="openProjectModal('music-player')">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </button>
+                <a href="https://github.com/your-Arvind/music-player" target="_blank" rel="noopener noreferrer" class="btn btn-project-gh" title="GitHub Repository">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. Expense Tracker -->
+          <div class="glass-card project-card" data-category="utilities">
+            <div class="project-thumb-box">
+              <img src="assets/projects/expense-tracker.svg" alt="Expense Tracker Thumbnail" class="project-img" loading="lazy">
+              <span class="project-status-badge status-completed"><i class="fa-solid fa-circle-check"></i> Completed</span>
+              <span class="project-num-badge">#09</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-category"><i class="fa-solid fa-chart-pie"></i> Finance Dashboard</span>
+              </div>
+              <h3 class="project-title">Expense Tracker</h3>
+              <p class="project-desc">
+                Personal finance dashboard providing real-time balance calculations, income/expense breakdown, categorized logging, transaction history, and local storage data persistence.
+              </p>
+              <div class="project-tags">
+                <span class="p-tag">LocalStorage</span>
+                <span class="p-tag">Data Visualization</span>
+                <span class="p-tag">JavaScript</span>
+              </div>
+              <div class="project-card-actions">
+                <button class="btn btn-project-demo" onclick="openProjectModal('expense-tracker')">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </button>
+                <a href="https://github.com/your-Arvind/expense-tracker" target="_blank" rel="noopener noreferrer" class="btn btn-project-gh" title="GitHub Repository">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10. Quiz Application -->
+          <div class="glass-card project-card" data-category="utilities">
+            <div class="project-thumb-box">
+              <img src="assets/projects/quiz-app.svg" alt="Quiz Application Thumbnail" class="project-img" loading="lazy">
+              <span class="project-status-badge status-completed"><i class="fa-solid fa-circle-check"></i> Completed</span>
+              <span class="project-num-badge">#10</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-category"><i class="fa-solid fa-circle-question"></i> Interactive Quiz</span>
+              </div>
+              <h3 class="project-title">Quiz Application</h3>
+              <p class="project-desc">
+                Interactive web developer quiz engine featuring countdown timer, multiple-choice questions, instant feedback animations, final score calculation, and review report.
+              </p>
+              <div class="project-tags">
+                <span class="p-tag">JavaScript Objects</span>
+                <span class="p-tag">Timers</span>
+                <span class="p-tag">Interactive UI</span>
+              </div>
+              <div class="project-card-actions">
+                <button class="btn btn-project-demo" onclick="openProjectModal('quiz-app')">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </button>
+                <a href="https://github.com/your-Arvind/quiz-application" target="_blank" rel="noopener noreferrer" class="btn btn-project-gh" title="GitHub Repository">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 11. Digital Clock -->
+          <div class="glass-card project-card" data-category="utilities">
+            <div class="project-thumb-box">
+              <img src="assets/projects/digital-clock.svg" alt="Digital Clock Thumbnail" class="project-img" loading="lazy">
+              <span class="project-status-badge status-completed"><i class="fa-solid fa-circle-check"></i> Completed</span>
+              <span class="project-num-badge">#11</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-category"><i class="fa-solid fa-clock"></i> Time Engine</span>
+              </div>
+              <h3 class="project-title">Digital Clock</h3>
+              <p class="project-desc">
+                Glowing neon orange digital timepiece displaying synchronized hours, minutes, seconds, 12/24 hour toggle, AM/PM indicators, live date format, and timezone indicator.
+              </p>
+              <div class="project-tags">
+                <span class="p-tag">Date Object</span>
+                <span class="p-tag">setInterval</span>
+                <span class="p-tag">CSS Glow</span>
+              </div>
+              <div class="project-card-actions">
+                <button class="btn btn-project-demo" onclick="openProjectModal('digital-clock')">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </button>
+                <a href="https://github.com/your-Arvind/digital-clock" target="_blank" rel="noopener noreferrer" class="btn btn-project-gh" title="GitHub Repository">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 12. Currency Converter -->
+          <div class="glass-card project-card" data-category="utilities">
+            <div class="project-thumb-box">
+              <img src="assets/projects/currency-converter.svg" alt="Currency Converter Thumbnail" class="project-img" loading="lazy">
+              <span class="project-status-badge status-completed"><i class="fa-solid fa-circle-check"></i> Completed</span>
+              <span class="project-num-badge">#12</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-category"><i class="fa-solid fa-money-bill-transfer"></i> FX Converter</span>
+              </div>
+              <h3 class="project-title">Currency Converter</h3>
+              <p class="project-desc">
+                Financial currency exchange calculator with live conversion rates, currency selector dropdowns (USD, INR, EUR, GBP), rapid swap button, and conversion history log.
+              </p>
+              <div class="project-tags">
+                <span class="p-tag">Exchange Rates API</span>
+                <span class="p-tag">Async JS</span>
+                <span class="p-tag">Responsive UI</span>
+              </div>
+              <div class="project-card-actions">
+                <button class="btn btn-project-demo" onclick="openProjectModal('currency-converter')">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </button>
+                <a href="https://github.com/your-Arvind/currency-converter" target="_blank" rel="noopener noreferrer" class="btn btn-project-gh" title="GitHub Repository">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 13. E-Commerce Website -->
+          <div class="glass-card project-card" data-category="clones">
+            <div class="project-thumb-box">
+              <img src="assets/projects/ecommerce-store.svg" alt="E-Commerce Website Thumbnail" class="project-img" loading="lazy">
+              <span class="project-status-badge status-completed"><i class="fa-solid fa-circle-check"></i> Completed</span>
+              <span class="project-num-badge">#13</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-category"><i class="fa-solid fa-store"></i> Full Web App</span>
+              </div>
+              <h3 class="project-title">E-Commerce Website</h3>
+              <p class="project-desc">
+                Full-scale responsive digital store featuring category filters, product search, slide-over shopping bag drawer, quantity modifications, subtotal calculation, and checkout modal.
+              </p>
+              <div class="project-tags">
+                <span class="p-tag">State Management</span>
+                <span class="p-tag">Shopping Cart</span>
+                <span class="p-tag">CSS Grid</span>
+              </div>
+              <div class="project-card-actions">
+                <button class="btn btn-project-demo" onclick="openProjectModal('ecommerce-store')">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </button>
+                <a href="https://github.com/your-Arvind/ecommerce-website" target="_blank" rel="noopener noreferrer" class="btn btn-project-gh" title="GitHub Repository">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 14. Responsive Landing Page -->
+          <div class="glass-card project-card" data-category="ui">
+            <div class="project-thumb-box">
+              <img src="assets/projects/landing-page.svg" alt="Responsive Landing Page Thumbnail" class="project-img" loading="lazy">
+              <span class="project-status-badge status-completed"><i class="fa-solid fa-circle-check"></i> Completed</span>
+              <span class="project-num-badge">#14</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-category"><i class="fa-solid fa-laptop"></i> SaaS Landing Page</span>
+              </div>
+              <h3 class="project-title">Responsive Landing Page</h3>
+              <p class="project-desc">
+                Modern high-converting SaaS landing page with sticky navigation, interactive feature pillars, animated pricing tiers, FAQ accordion, and lead-capture form.
+              </p>
+              <div class="project-tags">
+                <span class="p-tag">Flexbox</span>
+                <span class="p-tag">Micro-Interactions</span>
+                <span class="p-tag">Mobile Layout</span>
+              </div>
+              <div class="project-card-actions">
+                <button class="btn btn-project-demo" onclick="openProjectModal('landing-page')">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </button>
+                <a href="https://github.com/your-Arvind/responsive-landing-page" target="_blank" rel="noopener noreferrer" class="btn btn-project-gh" title="GitHub Repository">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 15. Password Generator -->
+          <div class="glass-card project-card" data-category="utilities">
+            <div class="project-thumb-box">
+              <img src="assets/projects/password-generator.svg" alt="Password Generator Thumbnail" class="project-img" loading="lazy">
+              <span class="project-status-badge status-completed"><i class="fa-solid fa-circle-check"></i> Completed</span>
+              <span class="project-num-badge">#15</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-category"><i class="fa-solid fa-key"></i> Security Tool</span>
+              </div>
+              <h3 class="project-title">Password Generator</h3>
+              <p class="project-desc">
+                Secure randomized password engine with slider length controls (6-32 chars), uppercase, lowercase, numbers, symbols toggles, strength meter, and 1-click clipboard copy.
+              </p>
+              <div class="project-tags">
+                <span class="p-tag">Crypto API</span>
+                <span class="p-tag">Clipboard API</span>
+                <span class="p-tag">UI Controls</span>
+              </div>
+              <div class="project-card-actions">
+                <button class="btn btn-project-demo" onclick="openProjectModal('password-generator')">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </button>
+                <a href="https://github.com/your-Arvind/password-generator" target="_blank" rel="noopener noreferrer" class="btn btn-project-gh" title="GitHub Repository">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 16. Stopwatch -->
+          <div class="glass-card project-card" data-category="utilities">
+            <div class="project-thumb-box">
+              <img src="assets/projects/stopwatch.svg" alt="Stopwatch Thumbnail" class="project-img" loading="lazy">
+              <span class="project-status-badge status-completed"><i class="fa-solid fa-circle-check"></i> Completed</span>
+              <span class="project-num-badge">#16</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-category"><i class="fa-solid fa-stopwatch"></i> Precision Timer</span>
+              </div>
+              <h3 class="project-title">Stopwatch</h3>
+              <p class="project-desc">
+                Millisecond-precision web chronometer with start, pause, resume, and split-lap recording list. Built with efficient performance timers and clean dark orange dials.
+              </p>
+              <div class="project-tags">
+                <span class="p-tag">High Res Timers</span>
+                <span class="p-tag">DOM Appending</span>
+                <span class="p-tag">CSS3 Glow</span>
+              </div>
+              <div class="project-card-actions">
+                <button class="btn btn-project-demo" onclick="openProjectModal('stopwatch')">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </button>
+                <a href="https://github.com/your-Arvind/stopwatch" target="_blank" rel="noopener noreferrer" class="btn btn-project-gh" title="GitHub Repository">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 17. Image Gallery -->
+          <div class="glass-card project-card" data-category="ui">
+            <div class="project-thumb-box">
+              <img src="assets/projects/image-gallery.svg" alt="Image Gallery Thumbnail" class="project-img" loading="lazy">
+              <span class="project-status-badge status-completed"><i class="fa-solid fa-circle-check"></i> Completed</span>
+              <span class="project-num-badge">#17</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-category"><i class="fa-solid fa-images"></i> Media Showcase</span>
+              </div>
+              <h3 class="project-title">Image Gallery</h3>
+              <p class="project-desc">
+                Fluid responsive image gallery with category filter tabs, lazy-loading thumbnails, smooth hover captions, and an interactive full-screen lightbox modal with image navigation.
+              </p>
+              <div class="project-tags">
+                <span class="p-tag">Masonry Grid</span>
+                <span class="p-tag">Lightbox Modal</span>
+                <span class="p-tag">Lazy Load</span>
+              </div>
+              <div class="project-card-actions">
+                <button class="btn btn-project-demo" onclick="openProjectModal('image-gallery')">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </button>
+                <a href="https://github.com/your-Arvind/image-gallery" target="_blank" rel="noopener noreferrer" class="btn btn-project-gh" title="GitHub Repository">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 18. Rock Paper Scissors Game -->
+          <div class="glass-card project-card" data-category="games">
+            <div class="project-thumb-box">
+              <img src="assets/projects/rock-paper-scissors.svg" alt="Rock Paper Scissors Game Thumbnail" class="project-img" loading="lazy">
+              <span class="project-status-badge status-completed"><i class="fa-solid fa-circle-check"></i> Completed</span>
+              <span class="project-num-badge">#18</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-category"><i class="fa-solid fa-hand-back-fist"></i> Arcade Game</span>
+              </div>
+              <h3 class="project-title">Rock Paper Scissors Game</h3>
+              <p class="project-desc">
+                Vibrant battle arena featuring Player vs Computer rounds, animated hand shake effects, randomized computer decisions, streak multipliers, and celebratory win banners.
+              </p>
+              <div class="project-tags">
+                <span class="p-tag">Math.random</span>
+                <span class="p-tag">CSS Keyframes</span>
+                <span class="p-tag">Game State</span>
+              </div>
+              <div class="project-card-actions">
+                <button class="btn btn-project-demo" onclick="openProjectModal('rock-paper-scissors')">
+                  <i class="fa-solid fa-play"></i> Play Demo
+                </button>
+                <a href="https://github.com/your-Arvind/rock-paper-scissors" target="_blank" rel="noopener noreferrer" class="btn btn-project-gh" title="GitHub Repository">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. ABOUT ME SECTION (Authentic Bio, Metrics, Code Philosophy)
+         ========================================================================= -->
+    <section class="section-padding about-section" id="about">
+      <div class="section-container">
+        
+        <div class="section-header text-center reveal-fade-up">
+          <div class="badge-pill">
+            <i class="fa-solid fa-user-tie"></i> Biography
+          </div>
+          <h2 class="section-heading">About <span class="text-orange-gradient">Arvind</span></h2>
+          <p class="section-subheading">
+            Dedicated frontend developer driven by design precision, clean code, and relentless continuous learning.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          
+          <!-- Left Column: Authentic Photo & Academic Badge -->
+          <div class="about-visual-col reveal-fade-right">
+            <div class="about-photo-wrapper">
+              <div class="about-photo-halo"></div>
+              <img src="assets/arvind_portrait.jpg" alt="Arvind Kumar - Portrait" class="about-real-photo">
+              
+              <!-- College Badge Overlay -->
+              <div class="about-badge-card glass-card">
+                <div class="badge-icon-wrap">
+                  <i class="fa-solid fa-building-columns"></i>
+                </div>
+                <div class="badge-text-wrap">
+                  <div class="badge-title">Madhusudan Das Degree College</div>
+                  <div class="badge-sub">Gorakhpur • BCA Scholar</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Personal Story & Credentials -->
+          <div class="about-info-col reveal-fade-left">
+            <div class="glass-card about-detail-card">
+              
+              <div class="about-intro-badge">
+                <i class="fa-solid fa-sparkles text-orange"></i> Who I Am
+              </div>
+
+              <h3 class="about-headline">
+                I'm <span class="text-white">Arvind Kumar</span>, a passionate Frontend Web Developer and BCA Student.
+              </h3>
+
+              <p class="about-narrative">
+                I'm a passionate Frontend Developer with skills in HTML, CSS, JavaScript, Git, and GitHub. I love creating responsive, interactive, and visually appealing websites while continuously learning and building projects that improve my development skills.
+              </p>
+
+              <p class="about-narrative">
+                Whether creating custom game algorithms, responsive e-commerce storefronts, or pixel-perfect landing pages, I prioritize semantic cleanliness, high performance, and delightful user experiences across all screen sizes.
+              </p>
+
+              <!-- Quick Info Grid -->
+              <div class="about-info-grid">
+                <div class="info-cell">
+                  <span class="info-cell-label"><i class="fa-solid fa-signature"></i> Full Name:</span>
+                  <span class="info-cell-val">Arvind Kumar</span>
+                </div>
+                <div class="info-cell">
+                  <span class="info-cell-label"><i class="fa-solid fa-briefcase"></i> Role:</span>
+                  <span class="info-cell-val text-orange">Frontend Web Developer</span>
+                </div>
+                <div class="info-cell">
+                  <span class="info-cell-label"><i class="fa-solid fa-graduation-cap"></i> Degree:</span>
+                  <span class="info-cell-val">Bachelor of Computer Applications (BCA)</span>
+                </div>
+                <div class="info-cell">
+                  <span class="info-cell-label"><i class="fa-solid fa-university"></i> University:</span>
+                  <span class="info-cell-val">DDU Gorakhpur University</span>
+                </div>
+                <div class="info-cell">
+                  <span class="info-cell-label"><i class="fa-solid fa-location-dot"></i> Location:</span>
+                  <span class="info-cell-val">Gorakhpur, Uttar Pradesh</span>
+                </div>
+                <div class="info-cell">
+                  <span class="info-cell-label"><i class="fa-solid fa-circle-check"></i> Status:</span>
+                  <span class="info-cell-val text-success">Open for Internships</span>
+                </div>
+              </div>
+
+              <!-- About Actions -->
+              <div class="about-actions-row">
+                <a href="assets/Arvind_Kumar_Resume.pdf" download="Arvind_Kumar_Resume.pdf" class="btn btn-primary">
+                  <i class="fa-solid fa-download"></i> Download Resume
+                </a>
+                <a href="#connect" class="btn btn-secondary">
+                  <i class="fa-solid fa-envelope"></i> Send Message
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Personal Philosophy / Testimonial Style Card (No Fake Reviews) -->
+        <div class="philosophy-card glass-card reveal-fade-up">
+          <div class="quote-icon-wrap">
+            <i class="fa-solid fa-quote-left"></i>
+          </div>
+          <div class="philosophy-content">
+            <h4 class="philosophy-title">Arvind's Development Philosophy</h4>
+            <p class="philosophy-quote">
+              "Great frontend engineering is the harmony between elegant aesthetic design and resilient, clean code. Every pixel should serve a purpose, and every interaction should feel natural and effortless for the user."
+            </p>
+            <div class="philosophy-author">
+              <span class="author-name">Arvind Kumar</span>
+              <span class="author-role">— Frontend Web Developer & Computer Science Student</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. EDUCATION SECTION (Timeline & Cards)
+         ========================================================================= -->
+    <section class="section-padding education-section" id="education">
+      <div class="section-container">
+        
+        <div class="section-header text-center reveal-fade-up">
+          <div class="badge-pill">
+            <i class="fa-solid fa-graduation-cap"></i> Academic Background
+          </div>
+          <h2 class="section-heading">Education <span class="text-orange-gradient">Timeline</span></h2>
+          <p class="section-subheading">
+            Formal qualifications and university coursework supporting my technological foundation.
+          </p>
+        </div>
+
+        <div class="education-grid">
+          
+          <!-- Primary Education Card: BCA -->
+          <div class="glass-card education-card featured-edu reveal-fade-up">
+            <div class="edu-top-row">
+              <div class="edu-icon-badge">
+                <i class="fa-solid fa-award"></i>
+              </div>
+              <div class="edu-status-pill">
+                <span class="pulse-dot"></span> Currently Pursuing (2024 — Present)
+              </div>
+            </div>
+
+            <h3 class="edu-degree">Bachelor of Computer Applications</h3>
+            <div class="edu-college">
+              <i class="fa-solid fa-building-columns text-orange"></i>
+              <strong>Madhusudan Das Degree College</strong>, Ashuran Chowk, Gorakhpur
+            </div>
+            <div class="edu-university">
+              <i class="fa-solid fa-landmark"></i>
+              Affiliated to <strong>Deen Dayal Upadhyaya Gorakhpur University (DDUGU)</strong>
+            </div>
+
+            <p class="edu-description">
+              Comprehensive undergraduate program focusing on computer science foundations, algorithm design, object-oriented programming with C++, data structures, modern web technologies, and database management systems.
+            </p>
+
+            <div class="edu-coursework-box">
+              <div class="coursework-title"><i class="fa-solid fa-book-open"></i> Key Coursework & Practical Focus:</div>
+              <div class="coursework-chips">
+                <span class="chip">Object-Oriented Programming (C++)</span>
+                <span class="chip">Data Structures & Algorithms</span>
+                <span class="chip">Web Technologies (HTML, CSS, JS)</span>
+                <span class="chip">Database Management Systems</span>
+                <span class="chip">Computer System Architecture</span>
+                <span class="chip">Operating Systems & CLI</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Secondary Timeline Items: High School & Intermediate -->
+          <div class="secondary-edu-column reveal-fade-up">
+            
+            <!-- Intermediate (12th Standard) -->
+            <div class="glass-card education-card mini-edu">
+              <div class="edu-top-row">
+                <span class="edu-year-tag">Higher Secondary (12th)</span>
+                <span class="edu-completed-badge"><i class="fa-solid fa-circle-check"></i> Completed</span>
+              </div>
+              <h4 class="mini-edu-title">Intermediate Education (Class 12th)</h4>
+              <div class="mini-edu-school">Uttar Pradesh State Board</div>
+              <p class="mini-edu-desc">
+                Completed secondary senior curriculum with Mathematics, Science, and Analytical Studies, building a robust foundation for computational logic and problem solving.
+              </p>
+            </div>
+
+            <!-- High School (10th Standard) -->
+            <div class="glass-card education-card mini-edu">
+              <div class="edu-top-row">
+                <span class="edu-year-tag">High School (10th)</span>
+                <span class="edu-completed-badge"><i class="fa-solid fa-circle-check"></i> Completed</span>
+              </div>
+              <h4 class="mini-edu-title">High School Matriculation (Class 10th)</h4>
+              <div class="mini-edu-school">Uttar Pradesh State Board</div>
+              <p class="mini-edu-desc">
+                Achieved strong academic standing with early focus on Science and Mathematics, sparking a lifelong interest in software and computing technology.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. CONTACT SECTION (Interactive Form, Copy Email, Socials)
+         ========================================================================= -->
+    <section class="section-padding contact-section" id="connect">
+      <div class="section-container">
+        
+        <div class="section-header text-center reveal-fade-up">
+          <div class="badge-pill">
+            <i class="fa-solid fa-envelope-open-text"></i> Let's Collaborate
+          </div>
+          <h2 class="section-heading">Get In <span class="text-orange-gradient">Touch</span></h2>
+          <p class="section-subheading">
+            Have a project, an internship opportunity, or want to discuss frontend web development? Feel free to reach out directly.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Left Column: Contact Cards -->
+          <div class="contact-info-col reveal-fade-right">
+            
+            <div class="glass-card contact-channel-card">
+              <div class="channel-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="channel-details">
+                <span class="channel-label">Email Address</span>
+                <a href="mailto:arvindgupta32823@gmail.com" class="channel-value" id="emailText">arvindgupta32823@gmail.com</a>
+              </div>
+              <button class="btn btn-copy-email" id="copyEmailBtn" title="Copy Email to Clipboard">
+                <i class="fa-solid fa-copy"></i> Copy
+              </button>
+            </div>
+
+            <div class="glass-card contact-channel-card">
+              <div class="channel-icon">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="channel-details">
+                <span class="channel-label">Phone Number</span>
+                <a href="tel:9582035342" class="channel-value">+91 9582035342</a>
+                <span class="placeholder-hint">[INSERT MY PHONE NUMBER]</span>
+              </div>
+              <a href="tel:9582035342" class="btn btn-tel-call" title="Call Now">
+                <i class="fa-solid fa-phone-volume"></i> Call
+              </a>
+            </div>
+
+            <div class="glass-card contact-channel-card">
+              <div class="channel-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="channel-details">
+                <span class="channel-label">Location</span>
+                <div class="channel-value">Gorakhpur, Uttar Pradesh, India</div>
+                <span class="placeholder-hint">[INSERT MY CITY AND STATE]</span>
+              </div>
+            </div>
+
+            <!-- Social Links Card -->
+            <div class="glass-card contact-social-card">
+              <span class="social-card-heading">Connect On Professional Networks:</span>
+              <div class="contact-social-row">
+                <a href="https://github.com/your-Arvind" target="_blank" rel="noopener noreferrer" class="social-pill-link">
+                  <i class="fa-brands fa-github"></i>
+                  <span>GitHub</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square mini-arrow"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/your-Arvind" target="_blank" rel="noopener noreferrer" class="social-pill-link">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                  <span>LinkedIn</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square mini-arrow"></i>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Professional Contact Form -->
+          <div class="contact-form-col reveal-fade-left">
+            <div class="glass-card contact-form-card">
+              
+              <h3 class="form-card-title">
+                <i class="fa-solid fa-paper-plane text-orange"></i> Send a Direct Message
+              </h3>
+              
+              <!-- Transparency Note as required by prompt -->
+              <div class="form-disclaimer-note">
+                <i class="fa-solid fa-circle-info"></i>
+                <span><strong>Notice:</strong> This client-side form prepares a formatted email message to launch in your mail client, or allows copying the formatted message draft.</span>
+              </div>
+
+              <form id="contactForm" novalidate>
+                
+                <div class="form-group">
+                  <label for="contactName" class="form-label">Your Name <span class="required">*</span></label>
+                  <div class="input-wrap">
+                    <i class="fa-solid fa-user input-icon"></i>
+                    <input type="text" id="contactName" name="name" class="form-control" placeholder="e.g. John Doe" required>
+                  </div>
+                  <span class="field-error" id="nameError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactEmail" class="form-label">Your Email <span class="required">*</span></label>
+                  <div class="input-wrap">
+                    <i class="fa-solid fa-envelope input-icon"></i>
+                    <input type="email" id="contactEmail" name="email" class="form-control" placeholder="e.g. john@example.com" required>
+                  </div>
+                  <span class="field-error" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactSubject" class="form-label">Subject <span class="required">*</span></label>
+                  <div class="input-wrap">
+                    <i class="fa-solid fa-tag input-icon"></i>
+                    <input type="text" id="contactSubject" name="subject" class="form-control" placeholder="e.g. Frontend Developer Opportunity / Collaboration" required>
+                  </div>
+                  <span class="field-error" id="subjectError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactMessage" class="form-label">Message <span class="required">*</span></label>
+                  <div class="input-wrap">
+                    <i class="fa-solid fa-comment-dots input-icon textarea-icon"></i>
+                    <textarea id="contactMessage" name="message" rows="5" class="form-control" placeholder="Write your message here..." required></textarea>
+                  </div>
+                  <span class="field-error" id="messageError"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary glow-btn btn-block" id="formSubmitBtn">
+                  <i class="fa-solid fa-paper-plane"></i>
+                  <span>Send Message</span>
+                </button>
+
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       11. PROFESSIONAL FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="section-container footer-content">
+      
+      <div class="footer-top-row">
+        <!-- Brand Summary -->
+        <div class="footer-brand-box">
+          <a href="#home" class="nav-brand">
+            <div class="brand-monogram">
+              <span class="mono-code">&lt;</span>AK<span class="mono-code">/&gt;</span>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">Arvind</span><span class="brand-accent">.dev</span>
+            </div>
+          </a>
+          <p class="footer-tagline">
+            Frontend Web Developer passionate about building high-performance, responsive and interactive digital experiences.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links-box">
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects (18)</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#connect">Connect</a></li>
+          </ul>
+        </div>
+
+        <!-- Connect & Resume -->
+        <div class="footer-cta-box">
+          <h4 class="footer-heading">Get In Touch</h4>
+          <p class="footer-email-text">
+            <a href="mailto:arvindgupta32823@gmail.com"><i class="fa-solid fa-envelope text-orange"></i> arvindgupta32823@gmail.com</a>
+          </p>
+          <p class="footer-phone-text">
+            <a href="tel:9582035342"><i class="fa-solid fa-phone text-orange"></i> +91 9582035342</a>
+          </p>
+          <div class="footer-resume-wrap">
+            <a href="assets/Arvind_Kumar_Resume.pdf" download="Arvind_Kumar_Resume.pdf" class="btn btn-sm btn-nav-resume">
+              <i class="fa-solid fa-download"></i> Download Resume (PDF)
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Divider & Copyright -->
+      <div class="footer-bottom-row">
+        <p class="copyright-text">
+          © 2026 <strong>Arvind Kumar</strong>. All rights reserved. Crafted with clean HTML5, CSS3 & JavaScript.
+        </p>
+        <div class="footer-social-tray">
+          <a href="https://github.com/your-Arvind" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/your-Arvind" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="mailto:arvindgupta32823@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       FLOATING BACK-TO-TOP BUTTON (with SVG Circular Progress Ring)
+       ========================================================================= -->
+  <button class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top of page">
+    <svg class="progress-ring" width="46" height="46" viewBox="0 0 46 46">
+      <circle class="progress-ring-bg" stroke="rgba(255, 107, 0, 0.2)" stroke-width="3" fill="transparent" r="20" cx="23" cy="23"/>
+      <circle class="progress-ring-circle" id="progressRingCircle" stroke="#ff6b00" stroke-width="3" fill="transparent" r="20" cx="23" cy="23"/>
+    </svg>
+    <i class="fa-solid fa-arrow-up btt-icon"></i>
+  </button>
+
+  <!-- =========================================================================
+       PROJECT MODAL (Interactive Live Demo & Code Viewer)
+       ========================================================================= -->
+  <div class="modal-backdrop" id="projectModalBackdrop">
+    <div class="modal-dialog glass-card" id="projectModalDialog">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-badge" id="modalCategoryBadge">Web App</span>
+          <h3 class="modal-title" id="modalTitle">Project Title</h3>
+        </div>
+        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <!-- Dynamic content filled by script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
+
